@@ -7,6 +7,11 @@ class MainScreen extends StatelessWidget{
       appBar: AppBar(
         title: const Text('Wisata Bandung'),
       ),
+      body: Card(
+        child: Row(
+
+        ),
+      ),
     );
   }
 }
