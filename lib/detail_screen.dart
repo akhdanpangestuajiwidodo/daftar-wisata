@@ -1,3 +1,4 @@
+import 'package:daftar_wisata/component/favorite_button.dart';
 import 'package:daftar_wisata/model/tourism_place.dart';
 import 'package:flutter/material.dart';
 
@@ -19,16 +20,22 @@ class DetailScreen extends StatelessWidget {
                   Image.asset(place.imageAsset),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: CircleAvatar(
-                      backgroundColor: Colors.amber,
-                      child: IconButton(
-                          icon: Icon(
-                              Icons.arrow_back,
-                            color: Colors.white,
-                          ),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          }),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.amber,
+                          child: IconButton(
+                              icon: Icon(
+                                  Icons.arrow_back,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              }),
+                        ),
+                        FavoriteButton(),
+                      ],
                     ),
                   )
                 ],
@@ -108,3 +115,5 @@ class DetailScreen extends StatelessWidget {
     );
   }
 }
+
+
